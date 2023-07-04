@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class Profile_Image {
+export class User_Profile_Image {
   // id
   @PrimaryGeneratedColumn({ type: 'int', name: '_id' })
   _id: number;

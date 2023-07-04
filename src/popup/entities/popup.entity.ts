@@ -8,63 +8,51 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class User {
+export class Popup {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  account: string;
+  start_date: Date;
 
   @Column()
-  nickname: string;
+  end_date: Date;
 
   @Column()
-  first_name: string;
+  is_center: number;
 
   @Column()
-  second_name: string;
+  left: number;
 
   @Column()
-  platform_type: string;
+  right: number;
 
   @Column()
-  role: string;
+  width: number;
 
   @Column()
-  gender: string;
+  height: number;
 
   @Column()
-  birthday: string;
+  device: string;
 
   @Column()
-  is_admin: boolean;
+  title: string;
 
   @Column()
-  register_datetime: Date;
+  content: string;
 
   @Column()
-  lastsignin_datetime: Date;
+  activated: boolean;
 
   @Column()
-  email: string;
+  page: number;
 
   @Column()
-  email_confirmed: boolean;
-
-  @Column({ default: 0 })
-  email_access_failed: number;
+  ip: string;
 
   @Column()
-  phone_number: string;
-
-  @Column()
-  phone_number_confirmed: boolean;
-
-  @Column({ default: 0 })
-  phone_access_failed: number;
-
-  @Column()
-  hashed_refresh_token: string;
+  user_id: number;
 
   @CreateDateColumn()
   created_at: Date;

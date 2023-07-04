@@ -9,6 +9,9 @@ import { ImagesModule } from './images/images.module';
 import { InquiriesModule } from './inquiries/inquiries.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { EmailModule } from './email/email.module';
+import { NotificationsModule } from './notifications/notifications.module';
+import { BannersModule } from './banners/banners.module';
+import { PopupModule } from './popup/popup.module';
 
 @Module({
   imports: [
@@ -21,6 +24,9 @@ import { EmailModule } from './email/email.module';
     InquiriesModule,
     AnalyticsModule,
     EmailModule,
+    NotificationsModule,
+    BannersModule,
+    PopupModule,
   ],
   controllers: [],
   providers: [],
