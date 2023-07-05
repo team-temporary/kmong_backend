@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class Profile_Image {
+export class User_Profile_Image {
   // id
   @PrimaryGeneratedColumn({ type: 'int', name: '_id' })
   _id: number;
@@ -18,16 +18,16 @@ export class Profile_Image {
   url: string;
 
   @Column('text', { nullable: true })
-  commonPath: string;
+  common_path: string;
 
   @Column('text', { nullable: true })
-  detailPath: string;
+  detail_path: string;
 
   @Column('text', { nullable: true })
-  originalFileName: string;
+  original_file_name: string;
 
   @Column('text', { nullable: true })
-  changeFileName: string;
+  change_file_name: string;
 
   @Column()
   extension: string;
@@ -36,11 +36,11 @@ export class Profile_Image {
   size: number;
 
   @CreateDateColumn()
-  createdAt: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updated_at: Date;
 
   @Column('datetime', { name: 'deletedAt', nullable: true })
-  deletedAt: Date | null;
+  deleted_at: Date | null;
 }

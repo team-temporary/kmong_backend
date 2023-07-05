@@ -7,18 +7,24 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class User_Address {
+export class Notification {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  zipno: number;
+  type: string;
 
   @Column()
-  road_full_addr: string;
+  message: string;
 
   @Column()
-  addr_detail: string;
+  board_id: number;
+
+  @Column()
+  url: string;
+
+  @Column()
+  datetime: Date;
 
   @CreateDateColumn()
   created_at: Date;

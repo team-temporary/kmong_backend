@@ -2,23 +2,42 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
 @Entity()
-export class User_Address {
+export class Banner {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  zipno: number;
+  start_date: Date;
 
   @Column()
-  road_full_addr: string;
+  end_date: Date;
 
   @Column()
-  addr_detail: string;
+  name: string;
+
+  @Column()
+  url: string;
+
+  @Column()
+  title: string;
+
+  @Column()
+  content: string;
+
+  @Column()
+  activated: boolean;
+
+  @Column()
+  ip: string;
+
+  @Column()
+  user_id: number;
 
   @CreateDateColumn()
   created_at: Date;
