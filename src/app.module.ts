@@ -12,6 +12,8 @@ import { EmailModule } from './email/email.module';
 import { NotificationsModule } from './notifications/notifications.module';
 import { BannersModule } from './banners/banners.module';
 import { PopupModule } from './popup/popup.module';
+import { BlocksModule } from './blocks/blocks.module';
+import { BlameModule } from './blame/blame.module';
 
 @Module({
   imports: [
@@ -27,6 +29,8 @@ import { PopupModule } from './popup/popup.module';
     NotificationsModule,
     BannersModule,
     PopupModule,
+    BlocksModule,
+    BlameModule,
   ],
   controllers: [],
   providers: [],
