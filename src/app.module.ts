@@ -14,6 +14,9 @@ import { BannersModule } from './banners/banners.module';
 import { PopupModule } from './popup/popup.module';
 import { BlocksModule } from './blocks/blocks.module';
 import { BlameModule } from './blame/blame.module';
+import { DormantModule } from './dormant/dormant.module';
+import { WithdrawalModule } from './withdrawal/withdrawal.module';
+import { LogsModule } from './logs/logs.module';
 
 @Module({
   imports: [
@@ -31,6 +34,9 @@ import { BlameModule } from './blame/blame.module';
     PopupModule,
     BlocksModule,
     BlameModule,
+    DormantModule,
+    WithdrawalModule,
+    LogsModule,
   ],
   controllers: [],
   providers: [],

@@ -7,15 +7,12 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class Block {
+export class Withdrawal_User {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  blocker: number;
-
-  @Column()
-  blocked: number;
+  withdrawal_date: Date;
 
   @CreateDateColumn()
   created_at: Date;

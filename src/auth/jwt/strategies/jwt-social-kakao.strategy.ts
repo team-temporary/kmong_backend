@@ -10,14 +10,12 @@ export class JwtKakaoStrategy extends PassportStrategy(Strategy, 'jwt-kakao') {
       scope: ['account_email', 'profile_nickname'],
     });
   }
-
   async validate(accessToken: string, refreshToken: string, profile: any) {
     console.log('guard start');
     console.log('accessToken' + accessToken);
     console.log('refreshToken' + refreshToken);
     // console.log(profile)
     // console.log(profile._json.kakao_account.email)
-
     return {
       name: profile.displayName,
       email: profile._json.kakao_account.email,

@@ -12,13 +12,22 @@ export class Blame {
   id: number;
 
   @Column()
-  zipno: number;
+  blamer: number;
 
   @Column()
-  road_full_addr: string;
+  blamed: number;
 
   @Column()
-  addr_detail: string;
+  content: string;
+
+  @Column()
+  status: string;
+
+  @Column()
+  ip: string;
+
+  @Column()
+  datetime: Date;
 
   @CreateDateColumn()
   created_at: Date;

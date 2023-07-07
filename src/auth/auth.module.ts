@@ -8,17 +8,20 @@ import { JwtGoogleStrategy } from './jwt/strategies/jwt-social-google.strategy';
 import { JwtNaverStrategy } from './jwt/strategies/jwt-social-naver.strategy';
 import { JwtModule } from '@nestjs/jwt';
 import { UsersModule } from 'src/users/users.module';
+import { UsersService } from 'src/users/services/users.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { User } from 'src/users/entities/user_information.entity';
 
 @Module({
   imports: [JwtModule.register({}), forwardRef(() => UsersModule)],
   controllers: [AuthController],
   providers: [
     AuthService,
-    JwtAccessStrategy,
-    JwtRefreshStrategy,
-    JwtKakaoStrategy,
-    JwtGoogleStrategy,
-    JwtNaverStrategy,
+    // JwtAccessStrategy,
+    // JwtRefreshStrategy,
+    // JwtKakaoStrategy,
+    // JwtGoogleStrategy,
+    // JwtNaverStrategy,
   ],
 })
 export class AuthModule {}
